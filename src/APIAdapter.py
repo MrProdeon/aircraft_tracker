@@ -54,22 +54,3 @@ class APIAdapter(AbstractAdapter):
         response = requests.get(url=self.opensky_url, params=params)
 
         self.aeroplanes = response.json()
-
-
-
-# test = APIAdapter()
-# coordinates = test.get_coordinates("Russia")
-# test.get_aeroplanes(coordinates)
-# print(test.aeroplanes)
-
-
-class Plane:
-
-    def __init__(self, country, callsign, speed, geo_altitude):
-        self.country = country
-        self.callsign = callsign
-        self.speed = speed
-        self.geo_altitude = geo_altitude
-
-
-    pass
